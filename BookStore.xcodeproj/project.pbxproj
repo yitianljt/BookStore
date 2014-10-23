@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A945F61319F91A69001CC02B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A945F61219F91A69001CC02B /* main.cpp */; };
-		A945F61B19F91AB1001CC02B /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A945F61919F91AB1001CC02B /* Move.cpp */; };
+		A945F61B19F91AB1001CC02B /* Movie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A945F61919F91AB1001CC02B /* Movie.cpp */; };
+		A945F61E19F930A4001CC02B /* Rental.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A945F61C19F930A4001CC02B /* Rental.cpp */; };
+		A945F62119F93346001CC02B /* Customer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A945F61F19F93346001CC02B /* Customer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +28,12 @@
 /* Begin PBXFileReference section */
 		A945F60F19F91A69001CC02B /* BookStore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BookStore; sourceTree = BUILT_PRODUCTS_DIR; };
 		A945F61219F91A69001CC02B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A945F61919F91AB1001CC02B /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
-		A945F61A19F91AB1001CC02B /* Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move.h; sourceTree = "<group>"; };
+		A945F61919F91AB1001CC02B /* Movie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Movie.cpp; sourceTree = "<group>"; };
+		A945F61A19F91AB1001CC02B /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		A945F61C19F930A4001CC02B /* Rental.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rental.cpp; sourceTree = "<group>"; };
+		A945F61D19F930A4001CC02B /* Rental.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rental.h; sourceTree = "<group>"; };
+		A945F61F19F93346001CC02B /* Customer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Customer.cpp; sourceTree = "<group>"; };
+		A945F62019F93346001CC02B /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,13 @@
 		A945F61119F91A69001CC02B /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
-				A945F61919F91AB1001CC02B /* Move.cpp */,
-				A945F61A19F91AB1001CC02B /* Move.h */,
+				A945F61919F91AB1001CC02B /* Movie.cpp */,
+				A945F61A19F91AB1001CC02B /* Movie.h */,
 				A945F61219F91A69001CC02B /* main.cpp */,
+				A945F61C19F930A4001CC02B /* Rental.cpp */,
+				A945F61D19F930A4001CC02B /* Rental.h */,
+				A945F61F19F93346001CC02B /* Customer.cpp */,
+				A945F62019F93346001CC02B /* Customer.h */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -123,8 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A945F61B19F91AB1001CC02B /* Move.cpp in Sources */,
+				A945F61E19F930A4001CC02B /* Rental.cpp in Sources */,
+				A945F61B19F91AB1001CC02B /* Movie.cpp in Sources */,
 				A945F61319F91A69001CC02B /* main.cpp in Sources */,
+				A945F62119F93346001CC02B /* Customer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

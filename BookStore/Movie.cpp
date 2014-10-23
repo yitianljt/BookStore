@@ -1,33 +1,33 @@
 //
-//  Move.cpp
+//  Movie.cpp
 //  Bookstore
 //
 //  Created by jintao on 14-10-23.
 //
 //
 
-#include "Move.h"
+#include "Movie.h"
 
 using namespace std;
 
 
-Move::Move(string* title,int code)
+Movie::Movie(string* title,int code)
 {
     _title = title;
     _priceCode = code;
 }
 
-Move::~Move()
+Movie::~Movie()
 {
-
+    
 }
 
-string* Move::getTitle()
+string* Movie::getTitle()
 {
     return _title;
 }
 
-int Move::getPriceCode()
+int Movie::getPriceCode()
 {
     return _priceCode;
 }
