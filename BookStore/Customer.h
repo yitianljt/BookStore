@@ -16,13 +16,13 @@
 
 class Customer{
 public:
-    Customer(std::string* name);
+    Customer(std::string name);
     void addRental(Rental* arg);
-    std::string* getName();
-    std::string* statement();
+    std::string getName();
+    std::string statement();
     
 private:
-    std::string* _name;
+    std::string _name;
     std::vector<Rental*> *_vecRental;
 };
 

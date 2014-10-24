@@ -20,14 +20,14 @@ enum{
 
 class Movie{
 public:
-    Movie(std::string* title,int code);
+    Movie(std::string title,int code);
     ~Movie();
     
-    std::string* getTitle();
+    std::string getTitle();
     int getPriceCode();
     
 private:
-    std::string* _title;
+    std::string _title;
     int _priceCode;
     
 };

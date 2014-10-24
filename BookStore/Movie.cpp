@@ -11,7 +11,7 @@
 using namespace std;
 
 
-Movie::Movie(string* title,int code)
+Movie::Movie(string title,int code)
 {
     _title = title;
     _priceCode = code;
@@ -22,7 +22,7 @@ Movie::~Movie()
     
 }
 
-string* Movie::getTitle()
+string Movie::getTitle()
 {
     return _title;
 }
