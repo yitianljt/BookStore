@@ -25,6 +25,7 @@ public:
     
     std::string getTitle();
     int getPriceCode();
+    double getCharge(int aDays);
     
 private:
     std::string _title;

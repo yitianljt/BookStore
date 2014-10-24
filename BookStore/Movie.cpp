@@ -31,3 +31,36 @@ int Movie::getPriceCode()
 {
     return _priceCode;
 }
+
+double Movie::getCharge(int aDays)
+{
+    double result = 0.0;
+    switch (getPriceCode()) {
+        case REGULAR:
+        {
+            result+=2;
+            if (aDays >2)
+            {
+                result+=(aDays-2)*1.5;
+            }
+            break;
+        }
+        case NEW_RELEASE:
+        {
+            result += aDays*3;
+            break;
+        }
+        case CHILDRENS:
+        {
+            result+=1.5;
+            if (aDays>3) {
+                result += (aDays-3)*1.5;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+    return  result;
+
+}
