@@ -34,8 +34,7 @@ string Customer::statement()
     for (vector<Rental*>::iterator it = _vecRental->begin(); it != _vecRental->end(); it++) {
         double thisAmount = 0;
         Rental* rental = (Rental*)*it;
-        thisAmount = amountFor(rental);
-        
+        thisAmount = rental->getCharge();
         
         frequentRenterPoints++;
         if (rental->getMovie()->getPriceCode()==NEW_RELEASE &&
@@ -54,37 +53,6 @@ string Customer::statement()
 }
 
 
-double Customer::amountFor(Rental* aRental)
-{
-    double result = 0.0;
-    switch (aRental->getMovie()->getPriceCode()) {
-        case REGULAR:
-        {
-            result+=2;
-            if (aRental->getDaysRented() >2)
-            {
-                result+=(aRental->getDaysRented()-2)*1.5;
-            }
-            break;
-        }
-        case NEW_RELEASE:
-        {
-            result += aRental->getDaysRented()*3;
-            break;
-        }
-        case CHILDRENS:
-        {
-            result+=1.5;
-            if (aRental->getDaysRented()>3) {
-                result += (aRental->getDaysRented()-3)*1.5;
-            }
-            break;
-        }
-        default:
-            break;
-    }
-    
-    return  result;
-}
+
 
 

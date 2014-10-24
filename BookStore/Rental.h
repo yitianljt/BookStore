@@ -19,7 +19,8 @@ public:
     
     int getDaysRented();
     Movie* getMovie();
-    
+    double getCharge();
+
     
 private:
     Movie* _movie;
