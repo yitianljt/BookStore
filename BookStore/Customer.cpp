@@ -50,34 +50,33 @@ string Customer::statement()
     sprintf(buff,"Total:%f", totalAmount);
     string result =buff;
     
-    
     return result;
 }
 
 
-double Customer::amountFor(Rental* rent)
+double Customer::amountFor(Rental* aRental)
 {
-    double thisAmount = 0.0;
-    switch (rent->getMovie()->getPriceCode()) {
+    double result = 0.0;
+    switch (aRental->getMovie()->getPriceCode()) {
         case REGULAR:
         {
-            thisAmount+=2;
-            if (rent->getDaysRented() >2)
+            result+=2;
+            if (aRental->getDaysRented() >2)
             {
-                thisAmount+=(rent->getDaysRented()-2)*1.5;
+                result+=(aRental->getDaysRented()-2)*1.5;
             }
             break;
         }
         case NEW_RELEASE:
         {
-            thisAmount += rent->getDaysRented()*3;
+            result += aRental->getDaysRented()*3;
             break;
         }
         case CHILDRENS:
         {
-            thisAmount+=1.5;
-            if (rent->getDaysRented()>3) {
-                thisAmount += (rent->getDaysRented()-3)*1.5;
+            result+=1.5;
+            if (aRental->getDaysRented()>3) {
+                result += (aRental->getDaysRented()-3)*1.5;
             }
             break;
         }
@@ -85,7 +84,7 @@ double Customer::amountFor(Rental* rent)
             break;
     }
     
-    return  thisAmount;
+    return  result;
 }
 
 
