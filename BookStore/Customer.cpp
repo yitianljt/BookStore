@@ -34,32 +34,8 @@ string Customer::statement()
     for (vector<Rental*>::iterator it = _vecRental->begin(); it != _vecRental->end(); it++) {
         double thisAmount = 0;
         Rental* rental = (Rental*)*it;
-        switch (rental->getMovie()->getPriceCode()) {
-            case REGULAR:
-            {
-                thisAmount+=2;
-                if (rental->getDaysRented() >2)
-                {
-                    thisAmount+=(rental->getDaysRented()-2)*1.5;
-                }
-                break;
-            }
-            case NEW_RELEASE:
-            {
-                thisAmount += rental->getDaysRented()*3;
-                break;
-            }
-            case CHILDRENS:
-            {
-                thisAmount+=1.5;
-                if (rental->getDaysRented()>3) {
-                    thisAmount += (rental->getDaysRented()-3)*1.5;
-                }
-                break;
-            }
-            default:
-                break;
-        }
+        thisAmount = amountFor(rental);
+        
         
         frequentRenterPoints++;
         if (rental->getMovie()->getPriceCode()==NEW_RELEASE &&
@@ -77,3 +53,39 @@ string Customer::statement()
     
     return result;
 }
+
+
+double Customer::amountFor(Rental* rent)
+{
+    double thisAmount = 0.0;
+    switch (rent->getMovie()->getPriceCode()) {
+        case REGULAR:
+        {
+            thisAmount+=2;
+            if (rent->getDaysRented() >2)
+            {
+                thisAmount+=(rent->getDaysRented()-2)*1.5;
+            }
+            break;
+        }
+        case NEW_RELEASE:
+        {
+            thisAmount += rent->getDaysRented()*3;
+            break;
+        }
+        case CHILDRENS:
+        {
+            thisAmount+=1.5;
+            if (rent->getDaysRented()>3) {
+                thisAmount += (rent->getDaysRented()-3)*1.5;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+    
+    return  thisAmount;
+}
+
+

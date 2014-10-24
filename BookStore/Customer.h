@@ -20,10 +20,12 @@ public:
     void addRental(Rental* arg);
     std::string getName();
     std::string statement();
+    double amountFor(Rental* rent);
     
 private:
     std::string _name;
     std::vector<Rental*> *_vecRental;
+    
 };
 
 #endif /* defined(__BookStore__Customer__) */
