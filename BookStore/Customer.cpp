@@ -35,13 +35,7 @@ string Customer::statement()
         double thisAmount = 0;
         Rental* rental = (Rental*)*it;
         thisAmount = rental->getCharge();
-        
-        frequentRenterPoints++;
-        if (rental->getMovie()->getPriceCode()==NEW_RELEASE &&
-            rental->getDaysRented()>1) {
-            frequentRenterPoints++;
-        }
-        
+        frequentRenterPoints+= rental->getRenterPoints();
         totalAmount += thisAmount;
         printf("thisAmount = %f",thisAmount);
     }

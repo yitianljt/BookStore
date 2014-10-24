@@ -62,3 +62,16 @@ double Rental::getCharge()
     }
     return  result;
 }
+
+int Rental::getRenterPoints()
+{
+    if (getMovie()->getPriceCode() == NEW_RELEASE &&
+        getDaysRented()>1) {
+        return 2;
+    }
+    else
+    {
+        return 1;
+    }
+    
+}

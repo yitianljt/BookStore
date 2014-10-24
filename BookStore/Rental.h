@@ -20,6 +20,7 @@ public:
     int getDaysRented();
     Movie* getMovie();
     double getCharge();
+    int    getRenterPoints();
 
     
 private:
